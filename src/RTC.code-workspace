@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "path": "Device"
+        },
+        {
+            "path": "Functions"
+        }
+    ],
+    "settings": {
+        "IoTWorkbench.BoardId": "devkit",
+        "IoTWorkbench.DevicePath": "Device",
+        "IoTWorkbench.FunctionPath": "Functions",
+        "IoTWorkbench.iothubConnectionString": "HostName=charlie-iot-hub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=3uW6xLB8ODK4QkvVUJeP2OHMdUod7HVG5h1uAuUQi+c=",
+        "IoTWorkbench.eventHubConnectionString": "Endpoint=sb://ihsuproddbres012dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=3uW6xLB8ODK4QkvVUJeP2OHMdUod7HVG5h1uAuUQi+c=",
+        "IoTWorkbench.eventHubConnectionPath": "iothub-ehub-charlie-io-1235758-8f656ac487",
+        "IoTWorkbench.iothubDeviceConnectionString": "HostName=charlie-iot-hub.azure-devices.net;DeviceId=az-c8934680ed00v1v4v1;x509=true",
+        "IoTWorkbench.functionAppId": "/subscriptions/8c9f7334-529a-41d2-a2ec-4019933b41ba/resourceGroups/Xamarin/providers/Microsoft.Web/sites/Charlie-v1"
+    }
+}

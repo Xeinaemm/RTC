@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:RTC.ViewModels;assembly=RTC"
+             x:Class="RTC.MainPage">
+
+    <Grid>
+        <Grid.BindingContext>
+            <viewModels:MainPageViewModel />
+        </Grid.BindingContext>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Scale="2" Text="{Binding Device.DeviceId, StringFormat='DeviceId: {0}'}" />
+            <Label Scale="2" Text="{Binding Device.Humidity, StringFormat='Humidity: {0}%'}" />
+            <Label Scale="2" Text="{Binding Device.Temperature, StringFormat='Temperature: {0}C&#186;'}" />
+            <Label Scale="2" Text="{Binding Device.Timestamp, StringFormat='Timestamp: {0}'}" />
+            <Label Scale="2" Text="{Binding Device.X, StringFormat='X: {0}'}" />
+            <Label Scale="2" Text="{Binding Device.Y, StringFormat='Y: {0}'}" />
+            <Label Scale="2" Text="{Binding Device.Z, StringFormat='Z: {0}'}" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry Grid.Column="1" Placeholder="Enter interval" Text="{Binding Interval, Mode=TwoWay}" />
+                <Button Grid.Column="3" Text="Send" Command="{Binding RealTimeStateCommand}" />
+            </Grid>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
